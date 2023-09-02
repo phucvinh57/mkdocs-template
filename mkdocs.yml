@@ -1,0 +1,72 @@
+site_name: MkDocs Template
+site_url: https://phucvinh57.github.io/mkdocs-template
+site_author: Nguyen Phuc Vinh
+site_description: Document template
+
+repo_name: phucvinh57/mkdocs-template
+repo_url: https://github.com/phucvinh57/mkdocs-template
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - Trang chủ: index.md
+  - Discourse:
+    - Cài đặt discourse: discourse/discourse-installation.md
+    - Front-end: 
+      - discourse/fe/hello-world.md
+  # - Git workflow: 
+  #   - git-workflow/index.md
+  #   - Git-branch workflow: git-workflow/git-branch-workflow.md
+  #   - Github Project: git-workflow/github-project.md
+  #   - Resolve conflict: git-workflow/resolve-conflict.md
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
